@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class StringTests {
+class StringTests {
     /**
      * 不是线程安全，速度快，常用
      */
@@ -36,12 +36,16 @@ public class StringTests {
      */
     static class ThreadStrBuf implements Runnable {
 
+        // 线程
         private Thread t;
 
+        // 线程名称
         private String threadName;
 
+        // 容器
         private StringBuffer stringBuffer;
 
+        // 重复出现的字符
         private Character character;
 
         ThreadStrBuf(String threadName, StringBuffer stringBuffer, Character character) {
@@ -71,6 +75,10 @@ public class StringTests {
             }
         }
 
+        /**
+         * 获得线程处理结果
+         * @return
+         */
         String getResultString() {
             return stringBuffer.toString();
         }
@@ -83,12 +91,12 @@ public class StringTests {
     @DisplayName(value = "字符串拼接，线程安全")
     void StringBuffer() throws InterruptedException {
         StringBuffer stringBuffer = new StringBuffer();
-        ThreadStrBuf threadStrBuf1 = new ThreadStrBuf("test", stringBuffer, '1');
-        ThreadStrBuf threadStrBuf2 = new ThreadStrBuf("test", stringBuffer, '2');
+        ThreadStrBuf threadStrBuf1 = new ThreadStrBuf("test1", stringBuffer, '1');
+        ThreadStrBuf threadStrBuf2 = new ThreadStrBuf("test2", stringBuffer, '2');
         threadStrBuf1.start();
         threadStrBuf2.start();
         Thread.sleep(1000);
+        Assertions.assertEquals(threadStrBuf1.getResultString(),threadStrBuf2.getResultString());
         System.out.println(threadStrBuf1.getResultString());
-        System.out.println(threadStrBuf2.getResultString());
     }
 }
