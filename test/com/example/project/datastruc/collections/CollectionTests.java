@@ -1,4 +1,4 @@
-package com.example.project.collections;
+package com.example.project.datastruc.collections;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

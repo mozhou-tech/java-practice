@@ -1,4 +1,4 @@
-package com.example.project.datastruc;
+package com.example.project.datastruc.old;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
