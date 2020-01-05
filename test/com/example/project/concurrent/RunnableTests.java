@@ -1,4 +1,4 @@
-package com.example.project.multithread;
+package com.example.project.concurrent;
 
 /**
  * 完成独立工作，无返回值

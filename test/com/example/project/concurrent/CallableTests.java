@@ -1,12 +1,10 @@
-package com.example.project.multithread;
+package com.example.project.concurrent;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.Callable;
-import java.util.concurrent.Future;
-import java.util.concurrent.FutureTask;
 
 /**
  * call有返回值, run返回void
@@ -19,13 +17,19 @@ class CallableTests {
      * 定义一个Callable实现类
      */
     static class CallableImpl implements Callable<Integer> {
+
         @Override
         public Integer call() throws InterruptedException {
             Thread.sleep(1000);
             return 1;
         }
+
     }
 
+    /**
+     * 等待callable返回结果
+     * @throws InterruptedException
+     */
     @Test
     @DisplayName(value = "callable 返回值")
     void call() throws InterruptedException {

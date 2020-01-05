@@ -69,7 +69,7 @@ class StringTests {
         void start() throws InterruptedException {
             if (t == null) {
                 this.t = new Thread(this, this.threadName);
-                // 使线程 从异步执行 变成同步执行
+                // 使线程 从异步执行 变成同步执行; 阻塞主线程
                 this.t.join();
                 this.t.start();
             }
