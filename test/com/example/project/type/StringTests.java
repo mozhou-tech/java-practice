@@ -32,18 +32,63 @@ public class StringTests {
     }
 
     /**
-     * 线程安全
+     * StringBuffer 处理线程
+     */
+    static class ThreadStrBuf implements Runnable {
+
+        private Thread t;
+
+        private String threadName;
+
+        private StringBuffer stringBuffer;
+
+        private Character character;
+
+        ThreadStrBuf(String threadName, StringBuffer stringBuffer, Character character) {
+            this.threadName = threadName;
+            this.stringBuffer = stringBuffer;
+            this.character = character;
+        }
+
+        public void run() {
+            System.out.println("Theard " + this.threadName + " started.");
+            for (int i = 0; i < 1000; i++) {
+                stringBuffer.append(this.character);
+                try {
+                    Thread.sleep(20);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        void start() throws InterruptedException {
+            if (t == null) {
+                this.t = new Thread(this, this.threadName);
+                // 使线程 从异步执行 变成同步执行
+                this.t.join();
+                this.t.start();
+            }
+        }
+
+        String getResultString() {
+            return stringBuffer.toString();
+        }
+    }
+
+    /**
+     * StringBuffer线程安全
      */
     @Test
     @DisplayName(value = "字符串拼接，线程安全")
-    void StringBuffer() {
+    void StringBuffer() throws InterruptedException {
         StringBuffer stringBuffer = new StringBuffer();
-        class ThreadStr extends Thread {
-
-        }
-        for (int i = 0; i < 1000; i++) {
-            stringBuffer.append(1);
-        }
-        System.out.println(stringBuffer.toString());
+        ThreadStrBuf threadStrBuf1 = new ThreadStrBuf("test", stringBuffer, '1');
+        ThreadStrBuf threadStrBuf2 = new ThreadStrBuf("test", stringBuffer, '2');
+        threadStrBuf1.start();
+        threadStrBuf2.start();
+        Thread.sleep(1000);
+        System.out.println(threadStrBuf1.getResultString());
+        System.out.println(threadStrBuf2.getResultString());
     }
 }
