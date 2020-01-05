@@ -31,7 +31,7 @@ class CallableTests {
      * @throws InterruptedException
      */
     @Test
-    @DisplayName(value = "callable 返回值")
+    @DisplayName(value = "callable 获取进程返回值")
     void call() throws InterruptedException {
         Long startTime = System.currentTimeMillis();
         CallableImpl callable = new CallableImpl();
