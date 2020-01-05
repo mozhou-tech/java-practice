@@ -99,4 +99,5 @@ class StringTests {
         Assertions.assertEquals(threadStrBuf1.getResultString(),threadStrBuf2.getResultString());
         System.out.println(threadStrBuf1.getResultString());
     }
+
 }
