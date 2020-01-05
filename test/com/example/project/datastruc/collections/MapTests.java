@@ -12,7 +12,7 @@ class MapTests {
     }
 
     @Test
-    @DisplayName(value = "")
+    @DisplayName(value = "HashMap不是线程安全，HashTable线程安全")
     void HashMap(){
 
     }
@@ -26,6 +26,11 @@ class MapTests {
     @Test
     @DisplayName(value = "")
     void LinkedHashMap(){
+    }
+
+    @Test
+    @DisplayName(value = "HashTable，线程安全 不允许key、value 是 null")
+    void HashTable(){
 
     }
 }

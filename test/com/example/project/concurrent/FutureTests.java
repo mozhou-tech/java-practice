@@ -14,7 +14,7 @@ import java.util.concurrent.*;
  * <p>
  * 常见的两种创建线程的方式。一种是直接继承Thread，另外一种就是实现Runnable接口。这两种方式都有一个缺陷就是：在执行完任务之后无法获取执行结果。
  */
-public class FutureTests {
+class FutureTests {
 
     /**
      * 定义一个Callable实现类
