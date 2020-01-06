@@ -1,4 +1,4 @@
-package com.example.project.datatype;
+package com.example.project.lang.datatype;
 
 /**
  * 泛型

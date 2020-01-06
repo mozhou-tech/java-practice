@@ -1,4 +1,4 @@
-package com.example.project.concurrent;
+package com.example.project.lang.concurrent;
 
 /**
  * 完成独立工作，无返回值

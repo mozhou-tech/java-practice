@@ -1,4 +1,4 @@
-package com.example.project.datatype.primitive;
+package com.example.project.lang.datatype.primitive;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -27,7 +27,7 @@ class IntTests {
     }
 
     @Test
-    @DisplayName("引用地址问题")
+    @DisplayName("引用地址问题(在JDK9中已过时)")
     void IntegerReference() {
         Integer integer1 = 1;
         Integer integer2 = 1;

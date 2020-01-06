@@ -1,4 +1,4 @@
-package com.example.project.concurrent;
+package com.example.project.lang.concurrent;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

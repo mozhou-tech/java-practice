@@ -1,4 +1,4 @@
-package com.example.project.datatype.primitive;
+package com.example.project.lang.datatype.primitive;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
