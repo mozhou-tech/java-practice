@@ -22,8 +22,10 @@ class ByteTests {
     @DisplayName("字符串用字节表示，互相转换，字节是个桥梁")
     void convert(){
         String s = "fs123$fdsa是";//String变量
-        byte b[] = s.getBytes();//String转换为byte[]
-        String t = new String(b);//bytep[]转换为String
+        //String转换为byte[]
+        byte b[] = s.getBytes();
+        //byte[]转换为String
+        String t = new String(b);
         System.out.println(t);
     }
 }
