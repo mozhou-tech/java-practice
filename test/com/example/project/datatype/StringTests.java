@@ -1,4 +1,4 @@
-package com.example.project.type;
+package com.example.project.datatype;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
