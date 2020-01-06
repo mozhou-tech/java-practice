@@ -83,9 +83,17 @@ class ArrayTests {
         int indexNotFound = Arrays.binarySearch(chars,'q');
         System.out.println("如果找不到，则返回-（插入点）： "+indexNotFound);
         int[] ints = {1,3,4,5};
+        /**
+         * 填充数组
+         */
         Arrays.fill(ints,0);
         List<Integer> integerList = new ArrayList<>();
         for (Integer in : ints) integerList.add(in);
         System.out.println(integerList);
+        /**
+         * 比较两个数组
+         */
+        boolean equal = Arrays.equals(ints, new int[]{0,0,0,0});
+        System.out.println(equal);
     }
 }
