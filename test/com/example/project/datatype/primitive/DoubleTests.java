@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
 class DoubleTests {
 
     @Test
-    @DisplayName("取值范围")
+    @DisplayName("Double取值范围")
     void range() {
         System.out.println("MIN: " + Double.MIN_VALUE);
         System.out.println("MAX: " + Double.MAX_VALUE);
