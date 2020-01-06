@@ -1,4 +1,4 @@
-package com.example.project.datastruc.outdated;
+package com.example.project.lang.datastruc.outdated;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
