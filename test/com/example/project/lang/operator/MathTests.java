@@ -65,4 +65,14 @@ class MathTests {
         c = a >>> 2;     /* 15 = 0000 1111 */
         System.out.println("a >>> 2 = " + c );
     }
+
+    @Test
+    @DisplayName("逻辑运算")
+    void bool(){
+        boolean a = true;
+        boolean b = false;
+        System.out.println("a && b = " + (a&&b));
+        System.out.println("a || b = " + (a||b) );
+        System.out.println("!(a && b) = " + !(a && b));
+    }
 }
