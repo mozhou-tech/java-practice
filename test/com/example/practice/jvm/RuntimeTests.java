@@ -52,22 +52,4 @@ class RuntimeTests {
         System.out.println(String.format("JVM能拿到的最大内存 %s MB", runtime.maxMemory()/1024/1024));
     }
 
-    /**
-     * 把实现了我们在Java code中声明的native方法的那个libraryload进来，或者load其他什么动态连接库
-     * JNI Example (Mac OS) https://gist.github.com/DmitrySoshnikov/8b1599a5197b5469c8cc07025f600fdb
-     */
-    @Test
-    @DisplayName("JNI机制，load&loadLibrary")
-    void load(){
-        String shortOsName = System.getProperty("os.name").substring(0,3);
-        // 判断操作系统类型
-        switch (shortOsName){
-            case "Mac":
-                System.out.println(shortOsName);
-                break;
-            default:
-                System.load("");
-                break;
-        }
-    }
 }
