@@ -1,4 +1,4 @@
-package com.example.practice.jvm;
+package com.example.practice.jvm.stack;
 
 /**
  * 栈
@@ -8,5 +8,5 @@ package com.example.practice.jvm;
  * 描述Java方法执行的内存模型，每个方法被执行的时候都会同时创建一个栈帧用于存储局部变量表、操作栈、动态链接、方法出口等信息；
  * 注意是每执行一个方法就创建一个栈帧，栈帧存放了当前方法的数据信息(局部变量)，方法执行完毕，该方法的栈帧就会被销毁。
  */
-public class StackTests {
+public class VMStackTests {
 }
