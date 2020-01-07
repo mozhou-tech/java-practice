@@ -1,4 +1,4 @@
-package com.example.practice.jni.c;
+package com.example.practice.jni.cython;
 
 import java.io.File;
 
@@ -19,11 +19,6 @@ class JNIExample {
          *  绝对路径，直接加载
          */
         System.load(getCurrentAbsolutePath() + "/JNITest.jnilib");
-        /**
-         * 指定动态库的名字即可，不需要前缀后缀，java 会去 java.library.path 系统属性指定的目录下查找动态库文件，一劳永逸；
-         */
-//        System.setProperty("java.library.path", System.getProperty("java.library.path") + File.pathSeparator + getCurrentAbsolutePath());
-//        System.loadLibrary("JNITest");
     }
 
     public native int returnInt(int length);
@@ -37,10 +32,6 @@ class JNIExample {
     public static void main(String args[]) {
         System.out.println("================returnInt================");
         String str = "Hello, world asdf!";
-        int length = (new JNIExample()).returnInt(str.length());
-        System.out.println(String.format("Return string length %s.", length));
-        System.out.println("================printString================");
-        (new JNIExample()).sayHello();
     }
 
     /**
@@ -53,3 +44,4 @@ class JNIExample {
         return directory.getAbsolutePath();
     }
 }
+
