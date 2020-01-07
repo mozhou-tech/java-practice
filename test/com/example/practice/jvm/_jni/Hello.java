@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
  * IDEA下的JNI编程
  * https://blog.csdn.net/i_am_yong_ge/article/details/97922319
  */
-class HelloWorld {
+class Hello {
     /**
      * 把实现了我们在Java code中声明的native方法的那个libraryload进来，或者load其他什么动态连接库
      * JNI Example (Mac OS) https://gist.github.com/DmitrySoshnikov/8b1599a5197b5469c8cc07025f600fdb
@@ -33,4 +33,6 @@ class HelloWorld {
         System.out.println(System.getProperty("java.library.path"));
         System.out.println(System.getProperty("user.name"));
     }
+
+
 }

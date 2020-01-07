@@ -1,7 +1,6 @@
 package com.example.practice.jvm;
 
 import com.example.practice.clazz.Pojo;
-import jdk.internal.loader.ClassLoaders;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
@@ -60,11 +59,6 @@ class ClassLoaderTests {
         System.out.println("Classloader of this class:" + Pojo.class.getClassLoader());
         System.out.println("Classloader of Logging:" + Field.class.getClassLoader());
         System.out.println("Classloader of System:" + System.class.getClassLoader());
-        try {
-            System.out.println(ClassLoaders.class.getName());
-        } catch (IllegalAccessError e) {
-            System.out.println("cannot access class jdk.internal.loader.ClassLoaders.");
-        }
         System.out.println("Classloader of ArrayList:" + ArrayList.class.getClassLoader());
     }
 
