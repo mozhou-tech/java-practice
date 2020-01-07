@@ -27,7 +27,7 @@ class GenerationTests {
     @Test
     @DisplayName("年轻代")
     void young(){
-        // 运行垃圾收集
+        // 运行垃圾收集，触发FullGC
         System.gc();
     }
 
