@@ -41,6 +41,7 @@ class JNIExample {
         System.out.println(String.format("Return string length %s.", length));
         System.out.println("================printString================");
         (new JNIExample()).sayHello();
+
     }
 
     /**
