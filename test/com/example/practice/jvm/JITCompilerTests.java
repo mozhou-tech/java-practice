@@ -11,9 +11,9 @@ import org.junit.jupiter.api.Test;
 class JITCompilerTests {
 
     @Test
-    @DisplayName("")
+    @DisplayName("1")
     void test(){
-        
+
     }
 
 }
