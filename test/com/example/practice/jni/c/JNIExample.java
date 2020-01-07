@@ -1,4 +1,4 @@
-package com.example.practice.jvm.jni;
+package com.example.practice.jni.c;
 
 /**
  * IDEA下的JNI编程
@@ -16,7 +16,7 @@ class JNIExample {
         /**
          *  绝对路径，直接加载
          */
-        System.load("/Users/jerrylau/IdeaProjects/java-practice/test/com/example/practice/jvm/jni/JNITest.jnilib");
+        System.load("/Users/jerrylau/IdeaProjects/java-practice/test/com/example/practice/jni/c/JNITest.jnilib");
         /**
          * 指定动态库的名字即可，不需要前缀后缀，java 会去 java.library.path 系统属性指定的目录下查找动态库文件，一劳永逸；
          */
@@ -24,6 +24,8 @@ class JNIExample {
     }
 
     public native int returnInt(int length);
+
+    public native void sayHello();
 
     /**
      * 把实现了我们在Java code中声明的native方法的那个libraryload进来，或者load其他什么动态连接库
@@ -35,6 +37,6 @@ class JNIExample {
         int length = (new JNIExample()).returnInt(str.length());
         System.out.println(String.format("Return string length %s.", length));
         System.out.println("================printString================");
-
+        (new JNIExample()).sayHello();
     }
 }
