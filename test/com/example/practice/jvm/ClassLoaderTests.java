@@ -5,4 +5,5 @@ package com.example.practice.jvm;
  * 理解JVM ClassLoader https://juejin.im/post/5c04892351882516e70dcc9b
  */
 public class ClassLoaderTests {
+
 }
