@@ -13,4 +13,10 @@ class InputStreamTests {
     void SequenceInputStream(){
 
     }
+
+    @Test
+    @DisplayName("合并流 SequenceInputStream")
+    void FileInputStream(){
+
+    }
 }
