@@ -9,19 +9,15 @@ class NotifyWaitTests {
 
     {
         synchronized (lock){
-            try {
-                lock.wait(10000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    @Test
-    @DisplayName("NotifyAll")
-    synchronized void  NotifyAll() throws InterruptedException {
-        synchronized (lock) {
-            Thread thread = new Thread(() -> {
+            Thread thread = new Thread(()->{
+                try {
+                    lock.wait(10000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            });
+            thread.start();
+            Thread thread1 = new Thread(() -> {
                 System.out.println("thread starting...");
                 try {
                     Thread.sleep(1000);
@@ -31,8 +27,13 @@ class NotifyWaitTests {
                 // 对象解锁
                 lock.notifyAll();
             });
-            thread.setDaemon(true);
-            thread.start();
+            thread1.start();
         }
+    }
+
+    @Test
+    @DisplayName("NotifyAll")
+    void  NotifyAll() throws InterruptedException {
+
     }
 }

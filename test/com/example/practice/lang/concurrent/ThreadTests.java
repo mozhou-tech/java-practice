@@ -40,11 +40,17 @@ class ThreadTests {
     }
 
     @Test
-    @DisplayName("adf")
+    @DisplayName("启动两个进程")
     void test(){
         RunnableDemo R1 = new RunnableDemo("Thread-1");
         R1.start();
         RunnableDemo R2 = new RunnableDemo("Thread-2");
         R2.start();
+    }
+
+    @Test
+    @DisplayName("线程管理")
+    void management(){
+
     }
 }
