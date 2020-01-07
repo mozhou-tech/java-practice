@@ -15,6 +15,9 @@ class NotifyWaitTests {
 
     /**
      * 对象锁
+     * 由于一个class不论被实例化多少次，其中的静态方法和静态变量在内存中都只有一份。所以，一旦一个静态的方法被申明为synchronized。
+     * 此类所有的实例化对象在调用此方法，共用同一把锁，我们称之为类锁。
+     * 对象锁是用来控制实例方法之间的同步，类锁是用来控制静态方法（或静态变量互斥体）之间的同步,
      */
     private static final Object obj = new Object();
 
