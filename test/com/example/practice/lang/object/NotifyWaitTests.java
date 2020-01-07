@@ -28,12 +28,12 @@ class NotifyWaitTests {
             synchronized (obj) {
                 System.out.println("->进入消费者线程");
                 try {
-                    System.out.println("还没生产，进入等待");
+                    System.out.println("还没生产，进入wait");
                     obj.wait();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.println("消费，收到notify");
+                System.out.println("消费，收到生产者notify");
                 System.out.println("->退出消费者线程");
             }
         }
