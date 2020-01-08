@@ -1,4 +1,4 @@
-package com.example.practice.lang.patterns;
+package com.example.practice.patterns;
 
 /**
  * 观察者模式

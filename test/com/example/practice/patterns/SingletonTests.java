@@ -1,4 +1,4 @@
-package com.example.practice.lang.patterns;
+package com.example.practice.patterns;
 
 /**
  * 单实例模式

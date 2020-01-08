@@ -1,4 +1,4 @@
-package com.example.practice.lang.patterns;
+package com.example.practice.patterns;
 
 /**
  * 适配器模式
