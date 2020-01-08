@@ -1,4 +1,4 @@
-package com.example.practice.lang.function;
+package com.example.practice.lang._programform.function;
 
 import com.example.practice.functional.FunctionalSay;
 import org.junit.jupiter.api.DisplayName;

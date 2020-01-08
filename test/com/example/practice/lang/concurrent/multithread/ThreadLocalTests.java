@@ -1,4 +1,4 @@
-package com.example.practice.lang.concurrent;
+package com.example.practice.lang.concurrent.multithread;
 
 /**
  * ThreadLocal 不是一个线程，而是一个线程的本地化对象。当某个变量在使用 ThreadLocal 进行维护时，

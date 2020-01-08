@@ -1,9 +1,7 @@
-package com.example.practice.lang.coroutine;
+package com.example.practice.lang.concurrent.coroutine;
 
 import co.paralleluniverse.fibers.Fiber;
-import co.paralleluniverse.fibers.SuspendExecution;
 import co.paralleluniverse.fibers.Suspendable;
-import co.paralleluniverse.strands.SuspendableRunnable;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

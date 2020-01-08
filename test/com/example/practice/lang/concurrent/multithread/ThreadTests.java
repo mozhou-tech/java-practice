@@ -1,4 +1,4 @@
-package com.example.practice.lang.concurrent;
+package com.example.practice.lang.concurrent.multithread;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
