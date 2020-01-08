@@ -12,8 +12,13 @@ import java.util.concurrent.TimeUnit;
 class DelayQueueTests {
 
     static class Cache implements Runnable {
+
         private boolean stop = false;
         private Map<String, String> itemMap = new HashMap<>();
+
+        /**
+         * 延迟队列，用于删除过期元素
+         */
         private DelayQueue<CacheItem> delayQueue = new DelayQueue<>();
 
         Cache() {
@@ -46,10 +51,10 @@ class DelayQueueTests {
                 if (cacheItem != null) {
                     // 元素过期, 从缓存中移除
                     itemMap.remove(cacheItem.getKey());
-                    System.out.println("key : " + cacheItem.getKey() + " 过期并移除");
+                    System.out.println("Cache.class 内部进程，key : " + cacheItem.getKey() + " 过期并移除");
                 }
             }
-            System.out.println("cache stop");
+            System.out.println("Cache.class 内部进程，cache stop");
         }
     }
 
@@ -67,6 +72,12 @@ class DelayQueueTests {
             this.currentTime = System.currentTimeMillis();
         }
 
+        /**
+         * 剩余缓存有效期
+         *
+         * @param unit
+         * @return
+         */
         @Override
         public long getDelay(TimeUnit unit) {
             // 计算剩余的过期时间
