@@ -9,6 +9,10 @@ import java.util.concurrent.DelayQueue;
 import java.util.concurrent.Delayed;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 缓存系统: 当能够从 DelayQueue 中获取元素时，说该缓存已过期
+ * 定时任务调度
+ */
 class DelayQueueTests {
 
     static class Cache implements Runnable {
