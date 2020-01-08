@@ -98,10 +98,11 @@ class ExecutorsTests {
      */
     @Test
     @DisplayName("创建一个支持定时及周期性的任务执行的线程池，多数情况下可用来替代Timer类")
-    void ScheduledThreadPool() {
+    void ScheduledThreadPool() throws InterruptedException {
         ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(1);
         scheduledExecutorService.scheduleAtFixedRate(() -> {
             System.out.println("test1");
         }, 1, 1, TimeUnit.SECONDS);
+        Thread.sleep(1200);
     }
 }
