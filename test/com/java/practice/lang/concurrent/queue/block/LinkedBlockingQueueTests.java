@@ -1,4 +1,4 @@
-package com.java.practice.lang.concurrent.queue;
+package com.java.practice.lang.concurrent.queue.block;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -9,9 +9,11 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
- * 由于LinkedBlockingQueue实现是线程安全的，实现了先进先出等特性，是作为生产者消费者的首选
+ * 对于 BlockingQueue，我们的关注点应该在 put(e) 和 take() 这两个方法，因为这两个方法是带阻塞的。
+ * 一个 BlockingQueue 可能是有界的，如果在插入的时候，发现队列满了，那么 put 操作将会阻塞。
+ * BlockingQueue 的实现都是线程安全的
  */
-class LinkedBlockQueueTests {
+class LinkedBlockingQueueTests {
     /**
      * 定义装苹果的篮子
      */
@@ -41,6 +43,7 @@ class LinkedBlockQueueTests {
             this.instance = instance;
             this.basket = basket;
         }
+
         public void run() {
             try {
                 while (true) {
@@ -102,6 +105,4 @@ class LinkedBlockQueueTests {
         }
         service.shutdownNow();
     }
-
-
 }
