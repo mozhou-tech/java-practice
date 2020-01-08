@@ -35,7 +35,6 @@ class StreamTests {
         random.ints().limit(10).sorted().forEach(System.out::println);
     }
 
-
     @Test
     @DisplayName("统计整形数组中元素的最大值，最小值，平均值，个数，元素总和等等")
     void statics() {
