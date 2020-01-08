@@ -1,7 +1,8 @@
-package com.example.practice.jvm;
+package com.example.practice.jvm.heap;
 
 /**
- * 堆
+ * 老年代，年轻代
+ *
  * Java 虚拟机具有一个堆，堆是运行时数据区域，所有类实例和数组的内存均从此处分配。堆是在 Java 虚拟机启动时创建的。
  * JVM主要管理两种类型的内存：堆和非堆。简单来说堆就是Java代码可及的内存，是留给开发人员使用的；非堆就是JVM留给自己用的
  *
@@ -9,4 +10,5 @@ package com.example.practice.jvm;
  * 所有的对象实例（直接或者间接使用new关键字创建的对象）以及数组都要在堆上分配(使用new关键字,就表示在堆中开辟一块新的存储空间)。
  */
 public class HeapTests {
+
 }

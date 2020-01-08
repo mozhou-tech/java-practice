@@ -22,10 +22,12 @@ class GenerationTests {
      * 就将存活对象直接存放到老年代。如果老年代也满了，就会触发一次FullGC，也就是新生代、老年代都进行回收。
      * 注意，新生代发生的GC也叫做MinorGC，MinorGC发生频率比较高，不一定等 Eden区满了才触发。
      *
+     * 经常被分为 Eden 和 Survivor
+     *
      * Minor GC 会清理年轻代的内存
      */
     @Test
-    @DisplayName("年轻代")
+    @DisplayName("新生代")
     void young(){
         // 运行垃圾收集，触发FullGC
         System.gc();
