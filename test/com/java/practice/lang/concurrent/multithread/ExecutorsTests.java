@@ -36,7 +36,7 @@ class ExecutorsTests {
     @DisplayName("创建固定数目线程的线程池")
     void FixedThreadPoolTest() throws InterruptedException {
         // 此处如果nThreads数量为1，则不会打印hello2
-        ExecutorService service = Executors.newFixedThreadPool(2);
+        ExecutorService service = Executors.newFixedThreadPool(1);
         service.execute(() -> {
             while (true) {
                 System.out.println("hello1");
@@ -53,11 +53,19 @@ class ExecutorsTests {
 
     @Test
     @DisplayName("可以看成newFixedThreadPool(无穷大), 线程复用")
-    void CachedThreadPoolTest() {
+    void CachedThreadPoolTest() throws InterruptedException {
         ExecutorService service = Executors.newCachedThreadPool();
         service.execute(() -> {
-            System.out.println("hello");
+            while (true) {
+                System.out.println("hello1");
+            }
         });
+        service.execute(() -> {
+            while (true) {
+                System.out.println("hello2");
+            }
+        });
+        TimeUnit.MILLISECONDS.sleep(1);
         service.shutdown();
     }
 
