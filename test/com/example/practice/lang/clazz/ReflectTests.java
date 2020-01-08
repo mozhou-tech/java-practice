@@ -44,7 +44,6 @@ class ReflectTests {
         // 获取class的方法
         Method[] methods = clazz.getMethods();
         System.out.println(String.format("class中定义了%s个方法如下：%s", methods.length, Arrays.asList(methods)));
-
     }
 
     @Test
