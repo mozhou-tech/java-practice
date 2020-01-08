@@ -17,13 +17,18 @@ class ExecutorsTests {
     @Test
     @DisplayName("创建线程池的靠谱方法")
     void ThreadPoolExecutorTest() {
+
         BlockingQueue workQueue = new SynchronousQueue<Runnable>();
         /**
          * Executors工厂内部封装了此方法
          */
-        ExecutorService service = new ThreadPoolExecutor(1, 2, 30000,
-                TimeUnit.SECONDS,
-                workQueue);
+        ExecutorService service = new ThreadPoolExecutor(
+                1, // 核心线程数
+                2, // 最大线程数
+                30000, // 线程终结前，等待新任务的时间
+                TimeUnit.SECONDS, // 时间单位
+                workQueue  // 任务队列，挂起时用于execute提交的任务
+        );
         service.shutdown();
     }
 
