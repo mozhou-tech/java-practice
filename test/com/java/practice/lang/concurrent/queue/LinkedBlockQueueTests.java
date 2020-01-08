@@ -41,7 +41,6 @@ class LinkedBlockQueueTests {
             this.instance = instance;
             this.basket = basket;
         }
-
         public void run() {
             try {
                 while (true) {
