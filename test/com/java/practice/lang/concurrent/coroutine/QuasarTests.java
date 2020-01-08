@@ -1,5 +1,6 @@
 package com.java.practice.lang.concurrent.coroutine;
 
+import co.paralleluniverse.common.util.Debug;
 import co.paralleluniverse.fibers.Fiber;
 import co.paralleluniverse.fibers.Suspendable;
 import org.junit.jupiter.api.DisplayName;
