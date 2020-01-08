@@ -67,9 +67,10 @@ class NotifyWaitTests {
         Thread consume = new Thread(new Consume(), "Consume");
         Thread produce = new Thread(new Produce(), "Produce");
         consume.start();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         produce.start();
         try {
+            // 阻塞线程
             produce.join();
             consume.join();
         } catch (InterruptedException e) {
