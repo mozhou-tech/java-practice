@@ -16,18 +16,18 @@
     </properties>
 
     <dependencies>
+<!--        quasar-->
         <dependency>
             <groupId>co.paralleluniverse</groupId>
             <artifactId>quasar-core</artifactId>
             <version>0.8.0</version>
-<!--            <classifier>jdk11</classifier>-->
         </dependency>
         <dependency>
             <groupId>co.paralleluniverse</groupId>
             <artifactId>quasar-actors</artifactId>
             <version>0.8.0</version>
-<!--            <classifier>jdk11</classifier>-->
         </dependency>
+<!--        junit-->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -41,11 +41,29 @@
             <version>1.9.5</version>
             <scope>runtime</scope>
         </dependency>
+<!--        netty-->
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId> <!-- Use 'netty-all' for 4.0 or above -->
             <version>4.1.44.Final</version>
             <scope>compile</scope>
+        </dependency>
+<!--        tensorflow-->
+        <dependency>
+            <groupId>org.tensorflow</groupId>
+            <artifactId>libtensorflow</artifactId>
+            <version>1.13.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.tensorflow</groupId>
+            <artifactId>libtensorflow_jni_gpu</artifactId>
+            <version>1.13.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.openpnp/opencv -->
+        <dependency>
+            <groupId>org.openpnp</groupId>
+            <artifactId>opencv</artifactId>
+            <version>3.2.0-0</version>
         </dependency>
     </dependencies>
     <build>
