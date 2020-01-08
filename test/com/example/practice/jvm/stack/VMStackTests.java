@@ -7,4 +7,14 @@ package com.example.practice.jvm.stack;
  * https://juejin.im/post/5db84c79f265da4d2970f034
  */
 public class VMStackTests {
+    /**
+     * 每次方法调用都会新建一个新的栈帧并把它压栈到栈顶。当方法正常返回或者调用过程中抛出未捕获的异常时，栈帧将出栈。更多关于异常处理的细节，可以参考下面的异常信息表章节。
+     *
+     * 每个栈帧包含：
+     *
+     * 局部变量数组
+     * 返回值
+     * 操作数栈
+     * 类当前方法的运行时常量池引用
+     */
 }

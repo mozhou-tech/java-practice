@@ -9,6 +9,8 @@ import org.junit.jupiter.api.Test;
  * 年轻代和年老代的划分是对垃圾收集影响比较大的。
  *
  * 分代收集算法
+ *
+ * https://zhuanlan.zhihu.com/p/33783873
  */
 class GenerationTests {
 
