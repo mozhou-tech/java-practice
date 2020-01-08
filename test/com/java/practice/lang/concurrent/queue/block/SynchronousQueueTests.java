@@ -9,6 +9,7 @@ import java.util.concurrent.*;
  * 读线程和写线程要同步
  * <p>
  * 当一个线程往队列中写入一个元素时，写入操作不会立即返回，需要等待另一个线程来将这个元素拿走
+ * 可以理解成这个，哈哈哈new ArrayBlockingQueue<>(1)
  */
 class SynchronousQueueTests {
     /**
