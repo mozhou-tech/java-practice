@@ -1,6 +1,8 @@
 package com.java.practice.jvm.stack;
 
 /**
+ * 每个线程都需要一个栈（Stack）空间来保存挂起（suspending）时的状态。
+ *
  * 虚拟机栈描述的是java方法执行的内存模型，每个方法执行都会创建一个栈帧，栈帧包含局部变量表、操作数栈、动态连接、方法出口等。
  * 栈帧(Stack Frame)是用于支持虚拟机进行方法调用和方法执行的数据结构，它是虚拟机运行时数据区的虚拟机栈(Virtual Machine Stack)的栈元素。
  *
@@ -17,4 +19,5 @@ public class VMStackTests {
      * 操作数栈
      * 类当前方法的运行时常量池引用
      */
+
 }
