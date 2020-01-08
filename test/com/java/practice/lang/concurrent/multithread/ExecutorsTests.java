@@ -76,13 +76,32 @@ class ExecutorsTests {
 
     @Test
     @DisplayName("创建一个单线程化的Executor")
-    void SingleThreadExecutorTest() {
-
+    void SingleThreadExecutorTest() throws InterruptedException {
+        // 此处如果nThreads数量为1，则不会打印hello2
+        ExecutorService service = Executors.newFixedThreadPool(1);
+        service.execute(() -> {
+            while (true) {
+                System.out.println("hello1");
+            }
+        });
+        service.execute(() -> {
+            while (true) {
+                System.out.println("hello2");
+            }
+        });
+        TimeUnit.MILLISECONDS.sleep(1);
+        service.shutdown();
     }
 
+    /**
+     * 用线程执行定时任务
+     */
     @Test
     @DisplayName("创建一个支持定时及周期性的任务执行的线程池，多数情况下可用来替代Timer类")
     void ScheduledThreadPool() {
-
+        ScheduledExecutorService service = Executors.newScheduledThreadPool(1);
+        service.scheduleAtFixedRate(() -> {
+            System.out.println("test1");
+        }, 1, 1, TimeUnit.SECONDS);
     }
 }
