@@ -38,7 +38,7 @@ class StreamTests {
 
     @Test
     @DisplayName("统计整形数组中元素的最大值，最小值，平均值，个数，元素总和等等")
-    void statics(){
+    void statics() {
         List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
         IntSummaryStatistics stats = numbers.stream().mapToInt((x) -> x).summaryStatistics();
         System.out.println("列表中最大的数 : " + stats.getMax());
@@ -48,11 +48,11 @@ class StreamTests {
     }
 
     @Test
-    @DisplayName("顶点印务")
-    void output(){
+    @DisplayName("Stream结果转换为Collections其它类型")
+    void output() {
         List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
         // 获取对应的平方数
-        List<Integer> squaresList = numbers.stream().map( i -> i*i).distinct().collect(Collectors.toList());
+        List<Integer> squaresList = numbers.stream().map(i -> i * i).distinct().collect(Collectors.toUnmodifiableList());
         System.out.println(squaresList);
     }
 }
