@@ -6,17 +6,17 @@ import org.junit.jupiter.api.Test;
 import java.util.concurrent.*;
 
 /**
- * 队列容量，其限制了队列中最多允许的元素个数；
- * 指定独占锁是公平锁还是非公平锁。非公平锁的吞吐量比较高，公平锁可以保证每次都是等待最久的线程获取到锁；
- * 可以指定用一个集合来初始化，将此集合中的元素在构造方法期间就先添加到队列中。
+ * 读线程和写线程要同步
+ * <p>
+ * 当一个线程往队列中写入一个元素时，写入操作不会立即返回，需要等待另一个线程来将这个元素拿走
  */
-class ArrayBlockingQueueTests {
+class SynchronousQueueTests {
     /**
      * 定义装苹果的篮子
      */
     public static class Basket {
         // 篮子，能够容纳3个苹果
-        BlockingQueue<String> basket = new ArrayBlockingQueue<>(3);
+        BlockingQueue<String> basket = new SynchronousQueue<String>();
 
         // 生产苹果，放入篮子
         void produce() throws InterruptedException {
