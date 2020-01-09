@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Python" name="Python">
+      <configuration sdkName="" />
+    </facet>
+  </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_11">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
@@ -39,5 +44,8 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.5.2" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.aspectj:aspectjweaver:1.9.5" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-all:4.1.44.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.tensorflow:libtensorflow:1.13.1" level="project" />
+    <orderEntry type="library" name="Maven: org.tensorflow:libtensorflow_jni_gpu:1.13.1" level="project" />
+    <orderEntry type="library" name="Maven: org.openpnp:opencv:3.2.0-0" level="project" />
   </component>
 </module>

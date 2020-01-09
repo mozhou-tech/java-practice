@@ -1,9 +1,9 @@
-package com.java.practice.patterns.factory;
+package com.java.practice.patterns.creational;
 
 /**
  * 工厂模式
  *
  * https://blog.csdn.net/lmj623565791/article/details/24460585
  */
-public class FactoryTests {
+public class StaticFactoryTests {
 }

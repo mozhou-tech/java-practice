@@ -1,4 +1,4 @@
-package com.java.practice.patterns.factory;
+package com.java.practice.patterns.creational;
 
 /**
  * 工厂模式
