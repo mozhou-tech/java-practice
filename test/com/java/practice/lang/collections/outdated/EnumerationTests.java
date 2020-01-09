@@ -1,4 +1,4 @@
-package com.java.practice.lang.datastruc.outdated;
+package com.java.practice.lang.collections.outdated;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package com.java.practice.lang.datastruc;
+package com.java.practice.datastruc;
 
 /**
  * 双向链表结构，LinkedHashMap
