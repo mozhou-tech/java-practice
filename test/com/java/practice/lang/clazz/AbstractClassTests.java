@@ -1,5 +1,6 @@
 package com.java.practice.lang.clazz;
 
+import com.alibaba.fastjson.JSON;
 import lombok.*;
 import org.junit.jupiter.api.Test;
 
@@ -26,7 +27,14 @@ class AbstractClassTests {
         @Getter
         @Setter
         private int number;
+
+        @Override
+        public String toString() {
+            return JSON.toJSONString(this);
+        }
+
     }
+
     @NoArgsConstructor
     private static class Salary extends Employee {
 
@@ -34,8 +42,15 @@ class AbstractClassTests {
         @Getter
         private double salary; //Annual salary
 
-        Salary(String name,String address,int number,double salary){
+        Salary(String name, String address, int number, double salary) {
             super(name, address, number);
+            this.setSalary(salary);
+        }
+
+
+        @Override
+        public String toString() {
+            return JSON.toJSONString(this);
         }
     }
 
@@ -45,5 +60,8 @@ class AbstractClassTests {
 //        Employee e = new Employee("George W.", "Houston, TX", 43);
         Salary s = new Salary("Mohd Mohtashim", "Ambehta, UP", 3, 3600.00);
         Employee e = new Salary("John Adams", "Boston, MA", 2, 2400.00);
+
+        System.out.println(String.format("salary %s", s.toString()));
+        System.out.println(String.format("employee %s", e.toString()));
     }
 }

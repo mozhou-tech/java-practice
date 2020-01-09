@@ -31,7 +31,7 @@ class IntTests {
     void IntegerReference() {
         Integer integer1 = 1;
         Integer integer2 = 1;
-        Integer integer3 = new Integer(1);
+        Integer integer3 = 1;
         System.out.println(integer1.hashCode());
         System.out.println(integer2.hashCode());
         System.out.println(integer3.hashCode());
