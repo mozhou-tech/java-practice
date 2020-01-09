@@ -27,11 +27,14 @@ class CommandPatternTests {
      * 负责具体实施和执行一个请求。任何一个类都可以成为接收者，实施和执行请求的方法为行动方法。
      */
     public static class Receiver {
+        {
+            System.out.println("---->初始化命令接收&操作者");
+        }
         /**
          * 真正执行命令相应的操作
          */
         void action() {
-            System.out.println("执行操作");
+            System.out.println("！最终要执行的操作");
         }
     }
 
@@ -60,6 +63,9 @@ class CommandPatternTests {
          * @param receiver
          */
         ConcreteCommand(Receiver receiver) {
+            {
+                System.out.println("---->初始化持有接受者的命令");
+            }
             this.receiver = receiver;
         }
 
@@ -85,6 +91,9 @@ class CommandPatternTests {
          * @param command
          */
         Invoker(Command command) {
+            {
+                System.out.println("---->初始化持有命令的调用者，命令需要实现execute方法");
+            }
             this.command = command;
         }
 
