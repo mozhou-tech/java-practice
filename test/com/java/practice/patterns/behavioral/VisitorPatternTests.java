@@ -62,7 +62,6 @@ class VisitorPatternTests {
 
 
     static class Keyboard implements ComputerPart {
-
         @Override
         public void accept(ComputerPartVisitor computerPartVisitor) {
             computerPartVisitor.visit(this);
@@ -70,7 +69,6 @@ class VisitorPatternTests {
     }
 
     static class Monitor implements ComputerPart {
-
         @Override
         public void accept(ComputerPartVisitor computerPartVisitor) {
             computerPartVisitor.visit(this);
@@ -109,7 +107,6 @@ class VisitorPatternTests {
     @Test
     @DisplayName("使用 Computer、ComputerPartVisitor 类来演示访问者模式的用法")
     void test() {
-
         ComputerPart computer = new Computer();
         computer.accept(new ComputerPartDisplayVisitor());
     }
