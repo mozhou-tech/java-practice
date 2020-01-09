@@ -7,6 +7,10 @@ import java.util.*;
 
 /**
  * List是一个接口，不能直接实例化
+ *
+ * ArrayList是实现了基于动态数组的数据结构，而LinkedList是基于链表的数据结构；
+ * 对于随机访问get和set，ArrayList优于LinkedList，因为LinkedList要移动指针。
+ *                  对于新增和删除操作add和remove，LinedList比较占优势，因为ArrayList要移动数据。
  */
 class ListTests {
 
