@@ -1,4 +1,4 @@
-package com.java.practice.datastruc;
+package com.java.practice.datastruc.array;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
