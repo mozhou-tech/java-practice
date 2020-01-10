@@ -1,4 +1,4 @@
-package com.java.practice.algorithm.datastructures.linkedlist;
+package com.java.practice.algorithm.datastructures.list;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
