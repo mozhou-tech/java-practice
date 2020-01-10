@@ -1,4 +1,4 @@
-package com.java.practice.spring.core.beans;
+package com.java.practice.framework.spring.beans;
 
 /**
  * 依赖查找(Dependency Lookup)：容器中的受控对象通过容器的API来查找自己所依赖的资源和协作对象。

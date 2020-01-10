@@ -1,4 +1,4 @@
-package com.java.practice.spring.core.beans;
+package com.java.practice.framework.spring.beans;
 
 import lombok.Getter;
 import lombok.Setter;

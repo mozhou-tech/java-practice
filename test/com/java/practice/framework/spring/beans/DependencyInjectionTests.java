@@ -1,4 +1,4 @@
-package com.java.practice.spring.core.beans;
+package com.java.practice.framework.spring.beans;
 
 /**
  * 依赖注入(Dependency Injection)：这就是DI，字面上理解，依赖注入就是将服务注入到使用它的地方。对象只提供普通的方法让容器去决定依赖关系，
