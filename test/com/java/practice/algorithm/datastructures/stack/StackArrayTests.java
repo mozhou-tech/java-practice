@@ -48,7 +48,7 @@ class StackArrayTests {
          *
          * @param size Size of the Stack
          */
-        public StackArray(int size) {
+        StackArray(int size) {
             maxSize = size;
             stackArray = new int[maxSize];
             top = -1;
