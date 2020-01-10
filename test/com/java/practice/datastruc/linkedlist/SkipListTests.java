@@ -1,5 +1,6 @@
 package com.java.practice.datastruc.linkedlist;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.Random;
@@ -7,24 +8,23 @@ import java.util.Random;
 /**
  * Skip list是一个“概率型”的数据结构，可以在很多应用场景中替代平衡树。Skip list算法与平衡树(红黑树以及 AVL 树)相比，有相似的渐进期望时间边界，
  * 但是它更简单，更快，使用更少的空间。Skip list是一个分层结构多级链表，最下层是原始的链表，每个层级都是下一个层级的“高速跑道”。
- *
+ * <p>
  * Java API中提供了支持并发操作的跳跃表ConcurrentSkipListSet和ConcurrentSkipListMap。
  * 有序的情况下：
  *  在非多线程的情况下，应当尽量使用TreeMap（红黑树实现）。
  *  对于并发性相对较低的并行程序可以使用Collections.synchronizedSortedMap将TreeMap进行包装，也可以提供较好的效率。但是对于高并发程序，应当使用ConcurrentSkipListMap。
- *
+ * <p>
  * 无序情况下：
  *  并发程度低，数据量大时，ConcurrentHashMap 存取远大于ConcurrentSkipListMap。
  *  数据量一定，并发程度高时，ConcurrentSkipListMap比ConcurrentHashMap效率更高。
- *
  */
-public class SkipListTests {
+class SkipListTests {
     /**
      * 跳跃表的节点,包括key-value和上下左右4个指针
      * created by 曹艳丰，2016-08-14
      * 参考：http://www.acmerblog.com/skip-list-impl-java-5773.html
      */
-    public static class SkipListNode<T> {
+    static class SkipListNode<T> {
         public int key;
         public T value;
         public SkipListNode<T> up, down, left, right; // 上下左右 四个指针
@@ -85,7 +85,7 @@ public class SkipListTests {
      * created by 曹艳丰，2016-08-14
      * 参考：http://www.acmerblog.com/skip-list-impl-java-5773.html
      */
-    public static class SkipList<T> {
+    static class SkipList<T> {
         private SkipListNode<T> head, tail;
         private int nodes;//节点总数
         private int listLevel;//层数
@@ -246,8 +246,9 @@ public class SkipListTests {
     }
 
     @Test
-    void test(){
-        SkipList<String> list=new SkipList<String>();
+    @DisplayName("跳跃表")
+    void test() {
+        SkipList<String> list = new SkipList<String>();
         System.out.println(list);
         list.put(2, "yan");
         list.put(1, "co");
