@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Test;
  * 常用操作：初始化，(随着栈帧的移除，方法在执行。可能出现stackoverflow.com/),++i,i++,
  * 在Java中继承关系，Stack继承自Vector，List，(abstractList?)
  */
-class StackTests {
+class NodeStackTests {
 
     /**
      * 链表的实现
