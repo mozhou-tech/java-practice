@@ -1,5 +1,6 @@
 package com.java.practice.datastruc.queue;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.Iterator;
@@ -33,6 +34,7 @@ class SimpleQueueTests {
     }
 
     @Test
+    @DisplayName("队列：先进先出")
     void test() {
         SimpleQueue queue = new SimpleQueue();
         queue.add(5);
