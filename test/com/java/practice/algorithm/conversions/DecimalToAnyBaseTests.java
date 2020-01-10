@@ -2,11 +2,12 @@ package com.java.practice.algorithm.conversions;
 
 import org.junit.jupiter.api.Test;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 
- class DecimalToAnyBaseTests {
+/**
+ * 十进制转换为任意进制
+ */
+class DecimalToAnyBaseTests {
     /**
      * This method produces a String value of any given input decimal in any base
      *
@@ -47,10 +48,10 @@ import java.util.ArrayList;
     }
 
     @Test
-    void test(){
+    void test() {
         int decInput = Integer.parseInt("1998");
         System.out.println();
-        int base =  Integer.parseInt("3");
+        int base = Integer.parseInt("3");
 
         System.out.println("Decimal Input" + " is: " + decInput);
         System.out.println("Value of " + decInput + " in base " + base + " is: " + convertToAnyBase(decInput, base));
