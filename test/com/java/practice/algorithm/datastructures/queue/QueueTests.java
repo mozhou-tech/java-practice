@@ -15,7 +15,7 @@ import java.util.LinkedList;
  * 从JDK 5 开始，Java集合框架提供了Queue接口，实现该接口的类可以当成队列使用，如LinkedBlockingQueue，PriorityBlockingQueue。
  * 可以通过轮询和等待-通知机制实现阻塞队列。
  */
-class SimpleQueueTests {
+class QueueTests {
 
     static class SimpleQueue<T> implements Iterable<T> {
         private LinkedList<T> storage = new LinkedList<T>();

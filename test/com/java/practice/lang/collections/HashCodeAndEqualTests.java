@@ -16,7 +16,7 @@ import org.junit.jupiter.api.Test;
  * 在64位机器上，C/C++的指针是8字节；32位是4字节。
  * 不管怎样Java的long都是8字节，足矣~
  */
-class HashCodeTests {
+class HashCodeAndEqualTests {
 
     @Test
     @DisplayName("test")
@@ -27,4 +27,20 @@ class HashCodeTests {
         System.out.println(integer1.hashCode());
         System.out.println(integer.equals(integer1));
     }
+
+    /**
+     * equals
+     */
+    public static class Person {
+        public String name;
+        public int age;
+        public boolean equals(Object o) {
+            if (o instanceof Person) {
+                Person p = (Person) o;
+                return this.name.equals(p.name) && this.age == p.age;
+            }
+            return false;
+        }
+    }
+
 }
