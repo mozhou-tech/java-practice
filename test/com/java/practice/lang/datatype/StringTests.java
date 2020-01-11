@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.StringJoiner;
+
 class StringTests {
     /**
      * 不是线程安全，速度快，常用
@@ -29,6 +31,29 @@ class StringTests {
         System.out.println(stringBuilder.toString());
         // 替换特定位置的char
         Assertions.assertEquals("a9989", stringBuilder.toString());
+    }
+
+    @Test
+    @DisplayName("分隔符拼接数组的需求很常见")
+    void StringJoiner(){
+        String[] names = {"Bob", "Alice", "Grace"};
+        var sj = new StringJoiner(", ");
+        for (String name : names) {
+            sj.add(name);
+        }
+        System.out.println(sj.toString());
+        System.out.println("==================添加开头和结尾===============");
+        String[] names1 = {"Bob", "Alice", "Grace"};
+        var sj1 = new StringJoiner(", ", "Hello ", "!");
+        for (String name : names1) {
+            sj1.add(name);
+        }
+        System.out.println(sj1.toString());
+        System.out.println("============String.join()静态方法，拼接String[]===============");
+
+        String[] names2 = {"Bob", "Alice", "Grace"};
+        var s = String.join(", ", names2);
+        System.out.println(s);
     }
 
     /**
