@@ -1,5 +1,6 @@
 package com.java.practice.algorithm.datastructures.queue;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.Comparator;
@@ -46,6 +47,7 @@ class PriorityQueueTests {
     }
 
     @Test
+    @DisplayName("优先级队列")
     void test() {
         Queue<User> q = new PriorityQueue<>(new UserComparator());
         // 添加3个元素到队列:
