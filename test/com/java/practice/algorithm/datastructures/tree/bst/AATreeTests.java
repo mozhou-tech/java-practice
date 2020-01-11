@@ -1,4 +1,4 @@
-package com.java.practice.algorithm.datastructures.tree.search;
+package com.java.practice.algorithm.datastructures.tree.bst;
 
 /**
  * AA 树在计算机科学一种形式的自平衡二叉查找树用于高效存储和检索序数据。 AA 树的名称是由它的发明者Arne Andersson而来。
@@ -8,4 +8,5 @@ package com.java.practice.algorithm.datastructures.tree.search;
  * 换句话说，没有红节点可以是一个左子儿。这导致代替2-3-4树，从而大大简化了维护2-3树的模拟。
  */
 public class AATreeTests {
+
 }

@@ -1,8 +1,6 @@
-package com.java.practice.algorithm.datastructures.tree.search;
+package com.java.practice.algorithm.datastructures.tree.bst;
 
 import org.junit.jupiter.api.Test;
-
-import java.util.Scanner;
 
 /**
  * 应用广泛
