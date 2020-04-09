@@ -15,6 +15,7 @@ class IntTests {
     void range() {
         System.out.println("MIN: " + Integer.MIN_VALUE);
         System.out.println("MAX: " + Integer.MAX_VALUE);
+        // 32位
         System.out.println("SIZE: " + Integer.SIZE);
     }
 
