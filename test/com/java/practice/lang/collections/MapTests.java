@@ -3,12 +3,13 @@ package com.java.practice.lang.collections;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.Map;
+
 class MapTests {
 
     @Test
     @DisplayName(value = "")
     void SortedMap(){
-
     }
 
     @Test

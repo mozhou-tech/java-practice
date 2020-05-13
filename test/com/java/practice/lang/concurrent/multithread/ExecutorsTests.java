@@ -105,4 +105,6 @@ class ExecutorsTests {
         }, 1, 1, TimeUnit.SECONDS);
         Thread.sleep(1200);
     }
+
+    // jdk8 新增一个线程池
 }
